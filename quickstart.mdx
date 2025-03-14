@@ -1,97 +1,646 @@
 ---
-title: 'Quickstart'
-description: 'Start building awesome documentation in under 5 minutes'
+title: "Portal Overview"
+description: "Description of your new file."
 ---
 
-## Setup your development
+This article provides a basic introduction to the Kentik v4 portal:
 
-Learn how to update your docs locally and deploy them to the public.
+![The default landing page for the Kentik v4 portal can be set to the Network Explorer module.](/images/NE-Main-891h1120w.png)
 
-### Edit and preview
+<Aside>For information on browser support and login procedures for the v4 portal, see [Kentik Portals](/v0ab11)</Aside>
 
-<AccordionGroup>
-  <Accordion icon="github" title="Clone your docs locally">
-    During the onboarding process, we created a repository on your Github with
-    your docs content. You can find this repository on our
-    [dashboard](https://dashboard.mintlify.com). To clone the repository
-    locally, follow these
-    [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-    in your terminal.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Preview changes">
-    Previewing helps you make sure your changes look as intended. We built a
-    command line interface to render these changes locally. 
-    1. Install the
-    [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the
-    documentation changes locally with this command: ``` npm i -g mintlify ```
-    2. Run the following command at the root of your documentation (where
-    `docs.json` is): ``` mintlify dev ```
-    <Note>
-      If you’re currently using the legacy ```mint.json``` configuration file, please update the Mintlify CLI:
+## Portal Sections
 
+The Kentik v4 portal is primarily comprised of modules — some referred to as
+“workflows” — that are each designed to help you efficiently access information
+related to a specific networking use case.
 
-      ```npm i -g mintlify@latest```
-      And run the new upgrade command in your docs repository:
+<Aside type="tip"> The KB's Use Cases page
+(accessed from the top of the left sidebar's `Contents` tab) enables you to
+match — based on type and/or role — your organization's use cases to
+corresponding modules in the Kentik portal. </Aside>
 
-      ```mintlify upgrade```
-      You should now be using the new ```docs.json``` configuration file. Feel free to delete the ```mint.json``` file from your repository.
-    </Note>
-  </Accordion>
-</AccordionGroup>
+In the [Portal Main Menu](#portal-main-menu), a
+selection of the most common and general modules — described in
+[Featured Overview](/featured-overview) — are featured at the top of the
+left column:
 
-### Deploy your changes
+- [Alerting](/alerting)
+- [Journeys](/journeys)
+- [Kentik Map](/kentik-map)
+- [Library](/library)
+- [My Kentik Portal](/my-kentik-portal)
+- [Observation Deck](/observation-deck)
 
-<AccordionGroup>
+The remaining modules are categorized into the following sections, which each
+contain multiple modules:
 
-<Accordion icon="message-bot" title="Install our Github app">
-  Our Github app automatically deploys your changes to your docs site, so you
-  don't need to manage deployments yourself. You can find the link to install on
-  your [dashboard](https://dashboard.mintlify.com). Once the bot has been
-  successfully installed, there should be a check mark next to the commit hash
-  of the repo.
-</Accordion>
-<Accordion icon="rocket" title="Push your changes">
-  [Commit and push your changes to
-  Git](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository#about-git-push)
-  for your changes to update in your docs site. If you push and don't see that
-  the Github app successfully deployed your changes, you can also manually
-  update your docs through our [dashboard](https://dashboard.mintlify.com).
-</Accordion>
+{/* <Tabs>
+  <TabItem label="Settings">
+  Administrative controls that enable you to tailor your Kentik
+  setup so that it works effectively for both you and your organization (see
+  [Settings Overview](/settings-overview)):
+  - Organization and user settings are available via drop-down menus from the
+  navbar (see [Org & User Overview](/org-user-overview)).
+  - Settings in categories such as Data Sources, Alerting, Agents, Network Metadata, and Data Enrichment (see
+  [Settings Categories](/settings-overview)) are accessed from the Settings
+  page or the `Settings` submenu on the **Portal Main Menu**.
+  </TabItem>
+  <TabItem label="Core">
+  A comprehensive view of the day-to-day operations of your network in
+    environments such as cloud, data center, WAN, and/or campus (see
+    [Core Overview](/core-overview)). The Core section includes the following
+    [Core Modules](/core-overview):
+  - [Network Explorer](/network-explorer)
+  - [Data Explorer](/data-explorer)
+  - [Capacity Planning](/capacity-planning)
+  - [Insights](/insights)
+  - [Raw Flow Explorer](/raw-flow-explorer)
+  </TabItem>
+  <TabItem label="Synthetics">
+  Kentik's Synthetics
+    workflows enable you to continuously monitor network performance so you can
+    uncover and correct issues before they impact customer experience (see
+    [Synthetics Overview](/synthetics-overview)). This proactive testing is
+    enabled by Kentik software agents (ksynth), including both public agents
+    (available to all Kentik customers) and private agents (available only to your
+    organization). The ping and traceroute tests performed with these agents
+    generate key metrics (latency, jitter, and loss) that are evaluated for
+    network health and performance. The Synthetics section includes the following
+    [Synthetics Modules](/synthetics-overview):
+  - [Synthetics Dashboard](/synthetics-dashboard)
+  - [Test Control Center](/test-control-center)
+  - [Agent Management](/agent-management)
+  - [BGP Route Viewer](/bgp-route-viewer)
+  - [State of the Internet](/state-of-the-internet)
+  </TabItem>
+  <TabItem label="NMS">
+  Kentik NMS provides a base layer of visibility for your network by
+      discovering and monitoring your network infrastructure (see
+      [NMS Overview](/nms-overview)). Our NMS implementation supports
+      traditional use cases like detecting devices that go down, graphing interface
+      statistics, sending alerts, and creating dashboards. The NMS section includes
+      the following modules (see [NMS Documentation](/nms-overview)):
+  - [NMS Dashboard](/nms-dashboard)
+  - [Metrics Explorer](/metrics-explorer)
+  - [Query Assistant](/query-assistant)
+  - [NMS Devices](/nms-devices)
+  - [NMS Interfaces](/nms-interfaces)
+  </TabItem>
+  <TabItem label="Edge">
+  Modules that enable
+    Ops/Engineering to understand both network utilization and costs related to
+    traffic coming from or going to external networks (see [Edge
+    Overview](/edge-overview)). The Edge section includes the following [Edge
+    Modules](/edge-overview):
+  - [Traffic Engineering](/traffic-engineering)
+  - [Connectivity Costs](/connectivity-costs)
+  - [Discover Peers](/discover-peers)
+  </TabItem>
+  <TabItem label="Protect">
+  A section covering multiple
+    security use cases (see [Protect Overview](/protect-overview)), enabling
+    you to defend your network, including detecting anomalies and responding
+    against DDoS and other threats. The Protect section includes the following
+    [Protect Workflows](/protect-overview):
+  - [DDos Defense](/ddos-defense)
+  - [Mitigations](/mitigations)
+  - [Botnet & Threat Analysis](/botnet-threat-analysis)
+  - [RPKI Analysis](/rpki-analysis)
+  <Aside>The DDoS Defense
+  and Mitigations modules work in tandem with Alerting, which is accessed via
+  the `Featured` section of the main menu.</Aside>
+  </TabItem>
+  <TabItem label="SP">
+  A section
+    focused on enabling service providers (e.g. ISPs) to understand requirements
+    and performance related to services they provide to customers and subscribers
+    (see [Service Provider Overview](/service-provider-overview)). The Service
+    Provider section includes the following
+    [Service Provider Workflows](/service-provider-overview):
+  - [CDN Analytics](/cdn-analytics)
+  - [OTT Service Tracking](/ott-service-tracking)
+  - [Kentik Market Intelligence](/kmi)
+  </TabItem>
+  <TabItem label="Cloud">
+  A section that helps you
+    manage public and hybrid cloud networking by enabling you to see the structure
+    of and traffic on cloud resources, to proactively evaluate and troubleshoot
+    performance, and to anticipate and minimize costs (see
+    [Cloud Overview](/cloud-overview)). The Cloud section includes the
+    following modules (see [Portal Cloud Section](/cloud-overview)):
+  - [Kentik Cloud](/kentik-cloud)
+  - [Kentik Kube](/kentik-kube)
+  - [Cloud Traffic Overviews](/cloud-traffic-overviews)
+  - [Cloud Performance Monitor](/cloud-performance)
+  - [Connectivity Checker](/connectivity-checker)
+  <Aside>Additional modules listed in the main menu that are not grouped into
+  the sections listed above are covered in **Portal Main Menu**.</Aside>
+  </TabItem>
+</Tabs> */}
 
-</AccordionGroup>
+### Settings
 
-## Update your docs
+Administrative controls that enable you to tailor your Kentik
+setup so that it works effectively for both you and your organization (see
+[Settings Overview](/settings-overview)):
+- Organization and user settings are available via drop-down menus from the
+navbar (see [Org & User Overview](/org-user-overview)).
+- Settings in categories such as Data Sources, Alerting, Agents, Network Metadata, and Data Enrichment (see
+[Settings Categories](/settings-overview)) are accessed from the Settings
+page or the `Settings` submenu on the [Portal Main Menu](#portal-main-menu).
 
-Add content directly in your files with MDX syntax and React components. You can use any of our components, or even build your own.
+### Core
+A comprehensive view of the day-to-day operations of your network in
+  environments such as cloud, data center, WAN, and/or campus (see
+  [Core Overview](/core-overview)). The Core section includes the following
+  [Core Modules](/core-overview):
+- [Network Explorer](/network-explorer)
+- [Data Explorer](/data-explorer)
+- [Capacity Planning](/capacity-planning)
+- [Insights](/insights)
+- [Raw Flow Explorer](/raw-flow-explorer)
 
-<CardGroup>
+### Synthetics
 
-<Card title="Add Content With MDX" icon="file" href="/essentials/markdown">
-  Add content to your docs with MDX syntax.
-</Card>
+Kentik's Synthetics
+  workflows enable you to continuously monitor network performance so you can
+  uncover and correct issues before they impact customer experience (see
+  [Synthetics Overview](/synthetics-overview)). This proactive testing is
+  enabled by Kentik software agents (ksynth), including both public agents
+  (available to all Kentik customers) and private agents (available only to your
+  organization). The ping and traceroute tests performed with these agents
+  generate key metrics (latency, jitter, and loss) that are evaluated for
+  network health and performance. The Synthetics section includes the following
+  [Synthetics Modules](/synthetics-overview):
+- [Synthetics Dashboard](/synthetics-dashboard)
+- [Test Control Center](/test-control-center)
+- [Agent Management](/agent-management)
+- [BGP Route Viewer](/bgp-route-viewer)
+- [State of the Internet](/state-of-the-internet)
 
-<Card
-  title="Add Code Blocks"
-  icon="square-code"
-  href="/essentials/code"
->
-  Add code directly to your docs with syntax highlighting.
-</Card>
+### Network Monitoring System
 
-<Card
-  title="Add Images"
-  icon="image"
-  href="/essentials/images"
->
-  Add images to your docs to make them more engaging.
-</Card>
+Kentik NMS provides a base layer of visibility for your network by
+    discovering and monitoring your network infrastructure (see
+    [NMS Overview](/nms-overview)). Our NMS implementation supports
+    traditional use cases like detecting devices that go down, graphing interface
+    statistics, sending alerts, and creating dashboards. The NMS section includes
+    the following modules (see [NMS Documentation](/nms-overview)):
+- [NMS Dashboard](/nms-dashboard)
+- [Metrics Explorer](/metrics-explorer)
+- [Query Assistant](/query-assistant)
+- [NMS Devices](/nms-devices)
+- [NMS Interfaces](/nms-interfaces)
 
-<Card
-  title="Add Custom Components"
-  icon="puzzle-piece"
-  href="/essentials/reusable-snippets"
->
-  Add templates to your docs to make them more reusable.
-</Card>
+### Edge
 
-</CardGroup>
+Modules that enable
+  Ops/Engineering to understand both network utilization and costs related to
+  traffic coming from or going to external networks (see [Edge
+  Overview](/edge-overview)). The Edge section includes the following [Edge
+  Modules](/edge-overview):
+- [Traffic Engineering](/traffic-engineering)
+- [Connectivity Costs](/connectivity-costs)
+- [Discover Peers](/discover-peers)
+
+### Protect
+
+A section covering multiple
+  security use cases (see [Protect Overview](/protect-overview)), enabling
+  you to defend your network, including detecting anomalies and responding
+  against DDoS and other threats. The Protect section includes the following
+  [Protect Workflows](/protect-overview):
+- [DDos Defense](/ddos-defense)
+- [Mitigations](/mitigations)
+- [Botnet & Threat Analysis](/botnet-threat-analysis)
+- [RPKI Analysis](/rpki-analysis)
+
+<Aside>The DDoS Defense
+and Mitigations modules work in tandem with Alerting, which is accessed via
+the `Featured` section of the main menu.</Aside>
+
+### Service Provider
+
+A section
+  focused on enabling service providers (e.g. ISPs) to understand requirements
+  and performance related to services they provide to customers and subscribers
+  (see [Service Provider Overview](/service-provider-overview)). The Service
+  Provider section includes the following
+  [Service Provider Workflows](/service-provider-overview):
+- [CDN Analytics](/cdn-analytics)
+- [OTT Service Tracking](/ott-service-tracking)
+- [Kentik Market Intelligence](/kmi)
+
+### Cloud
+
+A section that helps you
+  manage public and hybrid cloud networking by enabling you to see the structure
+  of and traffic on cloud resources, to proactively evaluate and troubleshoot
+  performance, and to anticipate and minimize costs (see
+  [Cloud Overview](/cloud-overview)). The Cloud section includes the
+  following modules (see [Portal Cloud Section](/cloud-overview)):
+- [Kentik Cloud](/kentik-cloud)
+- [Kentik Kube](/kentik-kube)
+- [Cloud Traffic Overviews](/cloud-traffic-overviews)
+- [Cloud Performance Monitor](/cloud-performance)
+- [Connectivity Checker](/connectivity-checker)
+
+<Aside>Additional modules listed in the main menu that are not grouped into
+the sections listed above are covered in **Portal Main Menu**.</Aside>
+
+## Portal Page Structure
+
+The basic structure of most portal pages is covered here.
+
+### Portal Page Layout
+
+The main elements of the v4 portal layout are basically similar across most (but
+not all) pages:
+
+- **Navbar**: A black horizontal navigation bar at the top of the page includes a
+set of elements that provide links to important portal functions (see [Portal
+Navbar](#portal-navbar).
+- **Subnav**: A silver (Light theme) or dark gray (Dark theme)
+horizontal navigation bar below the navbar includes UI elements that vary
+depending on the page (see [Portal Subnav](#portal-subnav).
+- **Main menu**: An overlay that
+opens from the hamburger icon at the left of the navbar, which provides the user
+with easy access to all of the portal’s modules and its most frequently accessed
+pages (see [Portal Main Menu](#portal-main-menu).
+- **Main content**: The main content area
+displays page components such as visualizations, tables, controls, and sidebars.
+These components vary widely depending on the current page.
+
+![A typical NavBar and Subnav in the Kentik portal.](/images/PO-Nav_subnav-112h1088w.png)
+
+#### Portal Navbar
+
+The portal's main navbar includes the following controls:
+
+- **Menu** (hamburger icon): A button that opens the main menu, which allows you
+to navigate to all the main modules/workflows of the portal (see [Portal Main
+Menu](#portal-main-menu).
+- **Kentik logo**: Our logo functions as a link to return to the landing
+page that you’ve designated as your default on the
+[User-specific Defaults](/user-profile) page of your User
+Profile.
+- **Search**: A field that opens the `Search` modal, where you can enter
+text to search for in the portal, or access your favorites and recently viewed
+pages (see [Portal Search](#portal-search).
+- **Product Updates** (megaphone icon): A button
+that pops up the [Product Updates](#product-updates) modal, which contains a list of the latest
+changes to the portal and other aspects of the Kentik product.
+- **Help and
+Support** (question mark icon): A button that opens the `Help and Support` popup
+(see [Portal Help and Support](#portal-help-and-support).
+- **Organization Settings** (building icon): A
+button that drops down a menu of organization-wide settings (see
+[Organization Settings](/org-user-overview)).
+- **User menu** (user icon): A
+button that drops down a menu of user-specific settings and offers the ability
+to log out of the Kentik portal. See [User Menu](/org-user-overview).
+
+<Aside>In addition to the controls available on the `Organization Settings`
+and `User` menus, a wide array of settings can be accessed via the Settings page
+(see [Settings Overview](/settings-overview)) or the `Settings` submenu on
+the [Portal Main Menu](#portal-main-menu).</Aside>
+
+#### Product Updates
+
+The `Product Updates` modal, which pops up from the `Product Updates` button in
+the [Portal Navbar](#portal-navbar), contains the following UI elements:
+
+- **Product updates**: A button (at the right of the title) that opens Kentik’s
+[Product Updates](https://new.kentik.com) page in new browser tab.
+- **Cancel**: An `X` in the top right corner that closes the popup, which you can also do by
+clicking outside it.
+- **Subscribe**: A button that opens a pop-up where you can
+subscribe to product updates by email, Slack, or RSS.
+- **Search**: A field at the
+top of the sidebar that filters the article list to articles matching the
+entered text.
+- **Article list**: A list of [Product Article Cards](#product-article-cards) that each
+represent a recent article in the product blog on Kentik’s website.
+
+#### Product Article Cards
+
+Each article card in the `Product updates` popup includes the following
+elements:
+
+- **Labels**: Tags that indicate different aspects of the release announced in the
+article (i.e. Improvement, New feature, or area of the portal impacted). You can
+filter articles by these tags on the [https://new.kentik.com]**Product Updates**
+page of the Kentik website.
+- **Date posted**: Approximately how long ago the
+article was posted. Hover to see the precise date.
+- **Title**: The title of the
+article.
+- **Excerpt**: The beginning of the article.
+- **Feedback emoticons**: Three
+emoticons (happy, neutral, and sad faces) that you can use to provide feedback
+on the article.
+- **Feedback**: A field in which to enter feedback on the article.
+Click the envelope button to submit.
+
+<Aside>A click on any of the above elements other than the feedback
+controls will open the full article in a new browser tab.</Aside>
+
+### Portal Subnav
+
+The subnav is a silver (Light theme) or dark gray (Dark theme) horizontal strip
+below the navbar, which includes the following UI elements:
+
+- **Breadcrumbs**: Indicates where you are in the portal and includes links that
+let you navigate up to a higher level.
+- **Page-specific buttons**: A set of
+buttons found in the subnav of many but not all portal modules. These menus
+provide access to actions that are specific to a given page, such as refreshing
+the page's data, sharing the page's content, creating a dashboard panel or saved
+view from the page, or adjusting query parameters that determine the results
+shown on the page. For more information about the subnav buttons on a specific
+page, see the subnav topic in that page's KB article .
+
+<Aside>Several module landing pages, including
+[**Observation Deck**](/observation-deck) and [**Alerting**](/alerting), have no
+subnav.</Aside>
+
+### Portal Main Menu
+
+The portal’s main menu opens from the hamburger icon at the left of the navbar.
+
+![The main menu in its default state.](/images/PO-Main_menu-384h1120w.png)
+
+The main menu includes the following sections:
+
+- **Featured** (top of left column): A series of links that direct you to
+"featured" areas of the portal (the most popular and general; see
+[Featured Overview](/featured-overview)). The following modules are
+currently featured (see [Featured Modules](/featured-overview)):
+    - [Alerting](/alerting)
+    - [Journeys](/journeys)
+    - [Kentik Map](/kentik-map)
+    - [Library](/library)
+    - [My Kentik Portal](/my-kentik-portal)
+    - [Observation Deck](/observation-deck)
+- **Portal sections** (center three
+  columns): Links, displayed by default in the center portion of the main menu,
+  that correspond to the modules of each of the portal's main sections, such as
+  Core, Synthetics, etc. For a list of the modules in each section, see [Portal
+  Sections](#portal-sections).
+  <Aside>The portal sections list is covered with a
+  popup submenu when you hover on either `Top Talkers` or `Settings`.</Aside>
+- **Top Talkers** (bottom of left column): A link that has two functions:
+    - On hover, it displays the `Top Talkers` submenu in the center portion of the
+  main menu, providing direct access to the portal's
+  [Core Aggregate Pages](/core-aggregate-pages). To close the submenu, move
+  off it or click the `X` at the upper right.
+    - When clicked, it takes you directly to the portal's
+  [Network Explorer](/network-explorer) page.
+  ![The Top Talkers submenu.](/images/PO-Top_talkers_submenu-448h672w.png)
+- **Settings**
+  (bottom of left column): A link that has two functions:
+    - On hover, it displays the `Settings` submenu in the center portion of the main
+  menu, providing direct access to individual modules where you can tailor your
+  Kentik setup to the specific needs of your organization. To close the submenu,
+  move off it or click the `X` at the upper right.
+    - When clicked, it takes you directly to the portal's Settings page (see
+  [Settings Overview](/settings-overview)), from which you can access the
+  same modules.
+  ![The Settings submenu.](/images/PO-Settings_submenu-336h672w.png)
+- **Discover**
+  (top of right column): A set of links to locations of interest in and out of
+  the portal (see [Discover Menu](#discover-menu)).
+- **Recently Viewed** (bottom of right
+  column): Links to portal pages that you’ve visited recently.
+
+#### Discover Menu
+
+Links in the `Discover` menu on the far right of the main menu direct to
+additional pages of interest (some of which are external to the portal), and
+include:
+
+- **Knowledge Base**: A link to this KB (opens in a new tab).
+- **Product Blog**: A
+link to the [Product Updates](https://new.kentik.com) page of the Kentik
+website, which announces the latest Kentik features and improvements (opens in a
+new tab).
+- **Integrations**: Links to pages that enable you to set up Kentik to
+work with external systems (see [**Integrations**](/integrations)). Integrations
+are available across a wide variety of categories, including DDoS Mitigation
+Platforms, SSO Platforms, Notification Channels, Operations, and Network
+Platforms.
+- **Demo Environment**: A standalone Kentik environment where users can
+work through short, hands-on tutorials to experience the core features of our
+product.
+- **API Tester**: A link to an environment in which you can see a list of
+Kentik's v6 APIs (see [About the V6 APIs](/v0ab09)) and test them by calling
+methods using data from your own Kentik account (opens in a new tab).
+
+## Portal Help and Support
+
+The `Help and Support` popup opens from the question mark icon in the [Portal
+Navbar](#portal-navbar). The popup includes two main panes that direct you to information and
+support:
+
+![](/images/PO-Help_and_support-741h416w.png)
+
+- **Check our Knowledge Base**: A link to the KB
+topic or article that we think is most likely to help you use or understand the
+settings and/or features at your current location (URL) in the portal.
+- **Submit a
+Support Request**: A form that you can fill out to pass along bug reports,
+feature requests, and general suggestions or observations; and a link that you
+can click to track your support requests in our support portal at
+https://support.kentik.com (which opens in a new tab).
+
+To submit a request from the popup:
+
+<Steps>
+1. In the `Summary` field, briefly state the reason for your support request (i.e.
+what you are asking for help with or about).
+2. With the `Type` drop-down, choose
+the type of support request (ask a question, report a bug, or ask for
+training).
+3. In the `Additional Details` field, give a more detailed description of
+what you are asking about and, if it's a bug, what we would do to reproduce
+it.
+4. Click the `Submit` button.
+</Steps>
+
+## Portal Search
+
+The portal's search features are covered here.
+
+### Portal Search UI
+
+The portal’s search functionality is implemented as a modal that opens from the
+`Search` field in the main navbar or by using [Search Keyboard Shortcuts](#search-keyboard-shortcuts). The
+`Search` modal, which you can access from any portal page, includes the
+following elements:
+
+- **Search**: A field, at the top of the modal, where you enter the text on which
+to search. The search is incremental, so you need not press return after
+entering the term.
+- **Try searching for** (question mark icon): A list that pops
+up when you hover on the icon. The list shows various things that you can search
+for and the properties you can enter to search for them. The list includes both
+network entities (e.g. ASNs, IP addresses, interfaces, etc.) and Kentik-specific
+constructs (e.g. cost groups, dashboards, etc.).
+<Aside type="tip">The same
+list is displayed in the **Search Results Tab** when no text is entered in the
+`Search` field.</Aside>
+- **Tabs**: The main display area of the modal, below the `Search`
+field, includes three tabs (see [Portal Search Tabs](#portal-search-tabs).
+
+### Portal Search Tabs
+
+The lozenge-like buttons at the top of the `Search` modal's main display area
+enable you to switch between three tabs:
+
+- **Favorites**: A list of portal views you’ve favorited (see [Favorites Tab](#favorites-tab).
+The number of favorites appears in parentheses in the tab head.
+- **Recents**: A list of your recently viewed dashboards and saved views (see [Recents Tab](#recents-tab).
+The number of recents appears in parentheses in the tab head.
+- **Search Results**: A list of search results for the term entered in the `Search` field (see
+[Search Results Tab](#search-results-tab).
+
+The `Search Results` tab displays as soon as you begin entering text in the
+`Search` field. If you haven't yet entered any text, the tab displayed when you
+first open the `Search` modal depends on whether you've favorited or recently
+visited any portal locations:
+
+If you've designated any favorites in the portal, the `Favorites` tab will
+display. If you don't have any favorites, your `Recents` tab will display. If you
+haven't visited any pages recently, the `Search Results` tab will be visible.
+
+#### Favorites Tab
+
+The `Favorites` tab on the `Search` modal provides you with a convenient place
+to bookmark portal locations that you visit often.
+
+### Favorites Tab UI
+
+The `Favorites` tab contains a list of every portal location that you have
+designated as a favorite. The list is divided into three categories:
+`Dashboards`, `Saved Views`, and `Screens & Workflows`. Click any listed
+bookmark to navigate directly to that
+location.
+
+![A list of all your favorite portal locations.](/images/PO-Search_favorites_tab-624h912w.png)
+
+### Manage Favorites
+
+A portal location (e.g. page) is indicated as a favorite by the star icon, which
+will be solid in locations that are already favorites, and otherwise outlined.
+Click the icon to toggle the designation on/off. The icon appears to the left of
+the page name in the following portal locations:
+
+- In the title bar of the page itself
+- On the [Library List](/library) (dashboards and saved views only)
+- In the `Saved Views` drawer on the Data Explorer page (saved views only)
+- In the `Search` modal, on the `Favorites` tab and **Recents Tab**.
+
+<Aside>Any changes to favorites made in the
+Search modal are not reflected in the modal until the next time it's opened.</Aside>
+
+#### Recents Tab
+
+The `Recents` tab includes two tables listing recently visited views, one for
+dashboards and the other for saved views. Both lists are in reverse
+chronological order. Click a listed view to go directly to that
+page.![A list of recently visited dashboards and saved views.](/images/PO-Recent_tab-440h904w.png)Each
+table row includes the following elements:
+
+- **Favorite**: A star icon that indicates whether the view is designated as a
+favorite (solid) or not (outlined). Click the icon to toggle the
+designation.
+- **Name**: The name of the view.
+- **Description**: The description text
+(if any) provided when the view was created or edited, which appears below the
+name.
+- **Last accessed**: How recently the view was accessed (measured in minutes,
+hours, days, weeks, or months).
+
+#### Search Results Tab
+
+Whenever the Search field is empty, the `Search Results` tab displays the
+`Try searching for` list (see [Portal Search UI](#portal-search-ui).
+
+![](/images/PO-Try_searching-552h608w.png)
+
+As you enter text in the `Search` field, the
+search engine starts looking for matches and the `Try searching for` list is
+replaced with the following elements:
+
+- **Results list**: A table at the left listing results that are grouped into
+sections by category (see [Results List](#results-list).
+- **Type list**: A list at the right
+of all the categories into which the returned results are grouped (see [Type
+List](#type-list), and showing the number of results in each category.
+- **See KB results**:
+A link that opens this KB in a new browser tab, where a `Search` page will be
+populated with KB results from the portal search term. The page will default to
+results from the v4 Portal KB, but you can use the tabs to switch to results
+from the Platform KB or the (deprecated) v3 Portal KB.
+
+![](/images/PO-Search_KB_results-480h672w.png)
+
+### Results List
+
+The first row of the `Results` list is a link to [**Journeys**](/journeys),
+where a new journey will be started using the entered search term. The remaining
+results are grouped by the type of portal view to which each result links (e.g.
+Interfaces, Synthetic Tests, Dashboards, etc.).
+
+![](/images/PO-Search_results_list-720h576w.png)
+
+If more than five results return for a given type, the `+ more` button will
+appear at the bottom right of the group, showing how many more results returned
+for that type. Click the button to expand the group to show the remaining
+results.
+
+<Aside type="tip">The display of any group in the `Results` list may be
+toggled on/off by clicking the corresponding element in the **Type List**.</Aside>
+
+### Type List
+
+When you begin entering text in the `Search` field, the `Type` list at the right
+of the `Search Results` tab is populated with a row for each type that is
+present in the returned results. Clicking on a given row will show/hide the
+corresponding group of results in the `Results` list.
+![](/images/PO-Search_type_list-240h192w.png)
+
+The row for each type includes the following
+elements:
+
+- **Type**: The name of the type (Dashboards, Interfaces, etc.).
+- **Count**: A lozenge indicating the number of results in the corresponding group of the
+`Results` list.
+
+<Aside>If the group corresponding to a given type is
+hidden in the `Results` list then the lozenge will be gray; otherwise it will be
+blue.</Aside>
+
+Two additional controls, found below the `Type` list, also affect what's visible
+in the `Results` list:
+
+- **All**: A button that shows all groups in the `Results` list.
+- **None**: A button that hides all groups in the `Results` list.
+
+#### Search Keyboard Shortcuts
+
+The `Search` modal includes keyboard shortcuts for the commands in the table
+below.
+
+<Aside type="tip">For shortcuts that are applicable across the portal, see
+[Portal Keyboard Shortcuts](#portal-keyboard-shortcuts).</Aside>
+
+<table><tbody><tr><td>Command</td><td>Keys</td><td>Note</td></tr><tr><td>Open Search</td><td>shift + S, cmd + /</td><td>Open the Search modal from anywhere in the portal.</td></tr><tr><td>Clear Search</td><td>esc</td><td>If there is text in the Search field, clear it.</td></tr><tr><td>Close Search</td><td>esc</td><td>If the Search field is blank, exit the search modal.</td></tr><tr><td>Switch between tabs</td><td>Left/right arrows</td><td>Switch between Search modal tabs.</td></tr><tr><td>Move up/down lists on each tab</td><td>Up/down arrows</td><td>Move the selection between the items of a list on a given tab of the Search modal.</td></tr><tr><td>Go to Page</td><td>Enter</td><td>Navigate to the page corresponding to a selected item.</td></tr></tbody></table>
+
+## Portal Keyboard Shortcuts
+
+The Kentik v4 portal includes keyboard shortcuts (global hotkeys) for the
+commands in the table below.
+
+<table><tbody><tr><td>Command</td><td>Keys</td></tr><tr><td>Close menu or drawer</td><td>esc</td></tr><tr><td>Open Search</td><td>shift + S</td></tr><tr><td>Open Data Explorer</td><td>shift + E</td></tr><tr><td>Open Library</td><td>shift + L</td></tr><tr><td>Open Observation Deck</td><td>shift + O</td></tr></tbody></table>
